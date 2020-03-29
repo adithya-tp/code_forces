@@ -10,6 +10,13 @@ Else, I check if we have a k value big enought to decrease "difference" from.
     Else decrease a by k, and k is now zero. Exit while.
 */
 
+/*
+Second Iteration:
+
+On browsing solutions on this, I realize it's more straight-forward to just follow
+the procedure given in the problem k times (who would've thought huh...)
+(although the running time for this is more).
+*/
 int main() {
     long a, nearest_ten, diff;
     int k;
