@@ -13,46 +13,34 @@ need to sort. Just keep track of maxL_start and minR_finish.
 
 #include <bits/stdc++.h>
 using namespace std;
-struct Interval {
-    int s, f;
-    Interval(int s, int f) {
-        this->s = s;
-        this->f = f;
-    }
-};
-
-bool finish_ascending(const Interval& class1, const Interval& class2) {
-    return class1.f < class2.f;
-}
-
-bool start_descending(const Interval& class1, const Interval& class2) {
-    return class1.s > class2.s;
-}
-
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int n, m, s, f, ans;
-    vector<Interval> chess;
-    vector<Interval> coding;
+    int n, m;
     cin >> n;
-    while(n--) {
-        cin >> s >> f;
-        chess.push_back(Interval(s, f));
+    vector<pair<int, int>> chess(n);
+    for(int i = 0; i < n; i++) {
+        cin >> chess[i].first >> chess[i].second;
     }
     cin >> m;
-    while(m--) {
-        cin >> s >> f;
-        coding.push_back(Interval(s, f));
+    vector<pair<int, int>> coding(m);
+    for(int i = 0; i < m; i++) {
+        cin >> coding[i].first >> coding[i].second;
+    }
+    int min_fin_coding = INT_MAX, max_start_coding = -INT_MAX;
+    int min_fin_chess = INT_MAX, max_start_chess = -INT_MAX;
+
+    for(int i = 0; i < n; i++) {
+        max_start_chess = max(max_start_chess, chess[i].first);
+        min_fin_chess = min(min_fin_chess, chess[i].second);
     }
 
-    sort(chess.begin(), chess.end(), finish_ascending);
-    sort(coding.begin(), coding.end(), start_descending);
-    ans = coding[0].s - chess[0].f;
-    
-    sort(coding.begin(), coding.end(), finish_ascending);
-    sort(chess.begin(), chess.end(), start_descending);
-    cout << max(0, max(ans, chess[0].s - coding[0].f)) << "\n";
+    for(int i = 0; i < m; i++) {
+        max_start_coding = max(max_start_coding, coding[i].first);
+        min_fin_coding = min(min_fin_coding, coding[i].second);
+    }
+
+    cout << max(0, max(max_start_chess - min_fin_coding, max_start_coding - min_fin_chess)) << "\n";
     
     return 0;
 }
