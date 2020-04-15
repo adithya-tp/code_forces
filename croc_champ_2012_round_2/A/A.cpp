@@ -3,7 +3,12 @@
  * This is your fourth point.
  * 
  * Iteration 2:
- * I'd like to solve this using complex numbers.
+ * solution using complex numbers. 
+ * For a parallelogram, the four vertices obey
+ * (z1 + z2) / 2 = (z3 + z4) / 2
+ * => z4 = z1 + z2 - z3
+ * The challenge is just to decide which points are z1, z2, and z3 respectively.
+ * Lower space complexity than Iteration 1.
  */
 #include <bits/stdc++.h>
 using namespace std;
