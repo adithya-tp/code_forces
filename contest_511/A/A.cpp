@@ -1,5 +1,9 @@
 /*
  * Iteration 1: A monstrosity that I pulled outta my ass.
+ * 
+ * Iteration 2: 
+ * If n - 2 is divisible by 3, print 1, 2, n - 3
+ * Else print 1, 1, n - 2;				
  */
 
 #include <bits/stdc++.h>
@@ -7,25 +11,12 @@ using namespace std;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int n, out;
+    int n;
     vector<int> nums;
     cin >> n;
-    for(int i = 3; i > 1; i--) {
-		out = n / i;
-		n -= out;
-		if(out % 3 == 0) {
-			out--; n++;
-		}
-		nums.push_back(out);
-	}
-	if(n % 3 == 0) {
-		nums[1] = nums[1] - 1;
-		nums.push_back(n+1);
-	}
+    if((n - 2) % 3 == 0)
+		cout << "1 2 " << n - 3 << "\n";
 	else
-		nums.push_back(n);
-	for(int i : nums)
-		cout << i << " ";
-	cout << "\n";
+		cout << "1 1 " << n - 2 << "\n";
     return 0;
 }
