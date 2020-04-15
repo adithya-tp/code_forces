@@ -7,33 +7,39 @@
  */
 #include <bits/stdc++.h>
 using namespace std;
+ 
+typedef complex<int> pt;
+#define r real()
+#define c imag()
+ostream& operator<<(ostream& os, pt p) {
+	 return os << p.r << " " << p.c << "\n";
+}
+
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int m, n, count;
+    int m, n;
+    vector<pt> pts;
+    char ch;
 	cin >> m >> n;
-	vector<vector<char>> g(m, vector<char>(n));
 	for(int i = 0; i < m; i++) {
-		count = 0;
 		for(int j = 0; j < n; j++) {
-			cin >> g[i][j];
-			if(g[i][j] == '*')
-				count++;
-		}
-		if(count == 1){
-			cout << i + 1 << " ";
+			cin >> ch;
+			if(ch == '*')
+				pts.push_back(pt{i+1, j+1});
 		}
 	}
-	for(int j = 0; j < n; j++) {
-		count = 0;
-		for(int i = 0; i < m; i++) {
-			if(g[i][j] == '*')
-				count++;
-		}
-		if(count == 1){
-			cout << j + 1 << "\n";
-			break;
-		}
+	if(pts[0].r == pts[1].r){
+		if(pts[1].c == pts[2].c)
+			cout << pts[2] + pts[0] - pts[1];
+		else
+			cout << pts[2] + pts[1] - pts[0];
+	}
+	else {
+		if(pts[0].c == pts[1].c)
+			cout << pts[0] + pts[2] - pts[1];
+		else
+			cout << pts[0] + pts[1] - pts[2];
 	}
 	return 0;
 }
