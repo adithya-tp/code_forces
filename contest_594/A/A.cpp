@@ -4,7 +4,6 @@
  * 
  * For each q being entered, I check with all p values if X and Y are integers.
  * This approach is correct, but slow (TLE of 4th test case).
- * 
  */
  
  
