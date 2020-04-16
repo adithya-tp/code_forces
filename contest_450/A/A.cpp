@@ -1,3 +1,7 @@
+/*Iteration 1:
+ * If the cardinality of points on the either side of OY is
+ * either 0 or 1, then we print YES
+ */
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
