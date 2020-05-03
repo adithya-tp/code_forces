@@ -15,7 +15,7 @@ int main() {
     vector<double> vel;
     pt b;
     int r, c, num, v;
-    double ans = 1000000.0; 
+    double ans = INT_MAX; 
     cin >> r >> c;
     b = pt(r, c);
     cin >> num;
