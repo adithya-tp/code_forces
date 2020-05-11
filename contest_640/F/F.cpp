@@ -44,6 +44,7 @@ int main() {
 					bs.push_back(1);
 				}
 		}
+		
 		for(int i : bs)
 			cout << i;
 		cout << "\n";
