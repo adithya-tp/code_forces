@@ -1,3 +1,7 @@
+/* The process of long division is simulated (you can't just let c++ do the division upto 
+ * arbitrary precision)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 
