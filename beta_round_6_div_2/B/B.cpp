@@ -46,7 +46,7 @@ int main() {
 	forn(i, r) {
 		forn(j, c) {
 			if(office[i][j] == color) {
-				for(int d = 0; d < 4; d++) {
+				forn(d, 4) {
 					if(i + dr[d] >= 0 && i + dr[d] < r && j + dc[d] >= 0 && j + dc[d] < c)
 						if(seen.find(office[i + dr[d]][j + dc[d]]) == seen.end()) {
 							count++;
