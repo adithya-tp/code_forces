@@ -35,7 +35,7 @@ int main() {
 	vi v(n), dp_left(n, 1), dp_right(n, 1);
 	forn(i, n)
 		cin >> v[i];
-	int res = INT_MIN;
+	int res = 1;
 	forp(i, 0, n - 1) {
 		if(v[i] < v[i + 1]) {
 			dp_left[i + 1] = dp_left[i] + 1;
