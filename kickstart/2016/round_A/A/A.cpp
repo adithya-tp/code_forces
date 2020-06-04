@@ -11,7 +11,6 @@
 #define for1(i, n) for(int i = 1; i < (int)(n); i++)
 #define ford(i, n) for(int i = (int)(n) - 1; i >= 0; i--)
 #define fore(i, a, t) for(int i = (int)(a); i <= (int)(b); i++)
-
 using namespace std;
 
 typedef pair<int, int> pii;
