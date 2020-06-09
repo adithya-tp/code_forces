@@ -1,3 +1,19 @@
+/*
+ * Iteration 1:
+ * After working out a couple examples, the idea that struck was to 
+ * keep flipping pancakes from the top till we reach a pancake of the 
+ * opposite type. This is a move.
+ * 
+ * Do this till the number of pancakes we flip equals the total pancakes.
+ * After doing this, if we have '+' at the top simply print the "moves".
+ * Else we print "moves + 1".
+ * 
+ * Iteration 2:
+ * Looking at the examples, (and after reading the solution), I was essentially
+ * counting the number of boundaries present ("+-" and "-+" sequences). After
+ * counting these, you could simply print the appropriate answer.
+ */
+
 #include <bits/stdc++.h>
 
 #define mp make_pair
