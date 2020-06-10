@@ -1,3 +1,8 @@
+/* Iteration 1: 
+ * Simply find the orientation of the three points, and print
+ * the appropriate output according to the orientation
+ */
+
 #include <bits/stdc++.h>
 #include <complex>
 #define x real()
