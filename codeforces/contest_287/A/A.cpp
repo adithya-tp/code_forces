@@ -17,7 +17,6 @@
 #define fore(i, a, t) for(int i = (int)(a); i <= (int)(b); i++)
 
 using namespace std;
-
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<pii> vpi;
