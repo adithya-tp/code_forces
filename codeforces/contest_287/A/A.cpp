@@ -51,6 +51,7 @@ int main() {
 		sum += v[i].first;
 		count++;
 	}
+	
 	cout << count << "\n";
 	if((int)ind.size()) {
 		forn(i, ind.size())
