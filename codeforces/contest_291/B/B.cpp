@@ -1,3 +1,8 @@
+/* Iteration 1:
+ * Simply keep track of all the slopes you've seen in a set.
+ * Edge case is checking for infinite slope. If thats the case,
+ * print 1 + size(set), else just print the size of the set.
+ */
 #include <bits/stdc++.h>
 #include <complex>
 
