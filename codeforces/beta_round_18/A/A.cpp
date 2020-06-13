@@ -1,3 +1,16 @@
+/* Iteration 1:
+ * I just check if the triangle has positive area (in retrospect, I 
+ * dont think i need 3 area checks smh). 
+ * 
+ * If its already a right triangle, i just print the appropriate message.
+ * 
+ * If not, I check the remaining 12 possible coordinate combinations result 
+ * in a right triangle (dot product = zero), by jiggling the x or y coordinate
+ * by +/- 1.
+ * 
+ * Else, print "NEITHER" and return.
+ */
+
 #include <bits/stdc++.h>
 #include <complex>
 
